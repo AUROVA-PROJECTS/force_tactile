@@ -55,47 +55,42 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Robust Single Object Tracking and Following by Fusion Strategy</h1>
+            <h1 class="title is-1 publication-title">Grasping Force Estimation in Markerless Visuo-Tactile Sensors</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                Alejandro Olivas,
+                Julio Castaño-Amorós,
               </span>
               <span class="author-block">
-                Miguel Ángel Muñoz-Bañón,
-              </span>
-              <span class="author-block">
-                Edison Velasco,
-              </span>
-              <span class="author-block">
-                Fernando Torres
+                Pablo Gil,
               </span>
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block">Gropu of Automation, Robotics and Computer Vision (AUROVA)<br>University of Alicante</span>
+              <span class="author-block">Group of Automation, Robotics and Computer Vision (AUROVA)<br>University of Alicante</span>
             </div>
 
             <div class="is-size-8 publication-authors">
-              <span class="author-block"><a href="mailto:alejandro.olivas@ua.es" target="_blank">alejandro.olivas@ua.es</a></span>
+              <span class="author-block"><a href="mailto:julio.ca@ua.es" target="_blank">julio.ca@ua.es</a></span>
+              <span class="author-block"><a href="mailto:pablo.gil@ua.es" target="_blank">pablo.gil@ua.es</a></span>
             </div>
 
             <div class="column has-text-centered">
               <div class="publication-links">
                     <!-- Paper link -->
                 <span class="link-block">
-                  <a href="https://rua.ua.es/dspace/bitstream/10045/138863/1/Olivas_etal_ICINCO-2023.pdf" target="_blank"
+                  <a href="" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Paper</span>
+                  <span>Paper (soon)</span>
                 </a>
               </span>
 
             <!-- Github link -->
             <span class="link-block">
-              <a href="https://github.com/AUROVA-LAB/applications/tree/main/app_tracker_fusion" target="_blank"
+              <a href="https://github.com/AUROVA-LAB/applications/tree/main/app_force_estimation" target="_blank"
                 class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                   <i class="fab fa-github"></i>
@@ -163,7 +158,7 @@
           
           <div class="publication-video">
             <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/n7d_BEgYg2k?si=oAVwz-0R4a1M0xAF" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/4n441Vaq704" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -182,15 +177,8 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Single Object Tracking methods are yet not robust enough because they may lose the target due to occlusions or
-            changes in the target’s appearance, and it is difficult to detect automatically when they fail. To deal with these
-            problems, we design a novel method to improve object tracking by fusing complementary types of trackers,
-            taking advantage of each other’s strengths, with an Extended Kalman Filter to combine them in a probabilistic
-            way. The environment perception is performed with a 3D LiDAR sensor, so we can track the object in the point
-            cloud and also in the front-view image constructed from the point cloud. We use our tracker-fusion method in
-            a mobile robot to follow pedestrians, also considering the dynamic obstacles in the environment to avoid them.
-            We show that our method allows the robot to follow the target accurately during long experimental sessions
-            where the trackers independently fail, demonstrating the robustness of our tracker-fusion strategy.
+            We employ force-based touch to grasp objects during manipulation tasks. The human-touch relationship applies to any kind of robotic manipulator, thus why the grasping force is so important in robotic manipulation and tactile sensing. In this work, we have implemented different approaches to estimate the normal grasping force from several types of visuotactile representations obtained from the DIGIT sensor. Our main goal is to determine the most suitable visuotactile representation without markers for this task. To prove it, the proposed methods were trained, validated, and tested on our dataset. Additionally, we tested the generalization capabilities of our best approach, named RGBmod, with five everyday objects. The results reveal 
+two main conclusions. First, the RGB visuotactile representation is a better input option for estimating the normal grasping force compared to the depth image or their combination when using the DIGIT sensor. Second, RGBmod improves its performance when testing with five unseen everyday objects compared to the training results. Besides, we have demonstrated that our proposal outperforms other works from the literature that use RGB and depth information for the same task.
           </p>
         </div>
       </div>
@@ -203,9 +191,9 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-        <img src="static/images/EKFdiagramICINCO.png" alt="Diagram Robust Single Object Tracking and Following by Fusion Strategy" class="center" width="50%"/>
+        <img src="static/images/esquema.png" alt="" class="center" width="100%"/>
         <h2 class="subtitle has-text-centered">
-          Diagram of our tracker-fusion method.
+          Diagram of our grasping force estimation method.
         </h2>
 </div>
 </div>
@@ -213,20 +201,7 @@
 <!-- End image carousel -->
 
 
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="gif-carousel" class="carousel results-carousel">
-        <div class="item">
-            <img src="static/videos/Follow1_alltrackers_compress.gif" alt="GIF pedestrian tracking" class="center" width="75%"/>
-        </div>
-        <div class="item">
-            <img src="static/videos/Follow2_alltrackers_compress.gif" alt="GIF pedestrian tracking" class="center" width="75%"/>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- Paper poster -->
 <!-- <section class="hero is-small is-light">
@@ -248,7 +223,7 @@
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>
-@conference{olivas2023robust,
+<!--@conference{olivas2023robust,
   author={Alejandro Olivas. and Miguel Muñoz{-}Bañón. and Edison Velasco. and Fernando Torres.},
   title={Robust Single Object Tracking and Following by Fusion Strategy},
   booktitle={Proceedings of the 20th International Conference on Informatics in Control, Automation and Robotics - Volume 1: ICINCO},
@@ -259,7 +234,7 @@
   doi={10.5220/0012178900003543},
   isbn={978-989-758-670-5},
   issn={2184-2809},
-}
+}-->
     </code></pre>
     </div>
 </section>
